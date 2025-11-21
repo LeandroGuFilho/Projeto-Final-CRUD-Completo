@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Acervo — Biblioteca Horizon</title>
+<link rel="stylesheet" href="../Css/Styeles.css">
+</head>
+<body>
+
+<header class="header">
+  <nav class="nav">
+    <div class="brand">Biblioteca Horizon</div>
+    <div>
+      <a href="index.html">Início</a>
+      <a href="clientes.html">Clientes</a>
+      <a href="acervo.html">Acervo</a>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+
+<h1>Acervo da Biblioteca</h1>
+
+<form id="formLivro">
+  <input type="hidden" id="idLivro">
+
+  <div>
+    <label>Título</label>
+    <input id="titulo">
+  </div>
+
+  <div>
+    <label>Autor</label>
+    <input id="autor">
+  </div>
+
+  <div>
+    <label>Ano</label>
+    <input id="ano" type="number">
+  </div>
+
+  <div>
+    <label>Gênero</label>
+    <input id="genero">
+  </div>
+
+  <div class="full">
+    <label>URL da Capa</label>
+    <input id="capa">
+  </div>
+
+  <div class="full">
+    <button class="btn primary" type="submit">Salvar</button>
+    <button type="reset" class="btn ghost">Limpar</button>
+    <button type="button" id="exportLivros" class="btn ghost">Exportar</button>
+    <label class="btn ghost" for="inputImport">Importar JSON</label>
+    <input type="file" id="inputImport" hidden accept="application/json">
+  </div>
+</form>
+
+<div class="categorias" id="categorias"></div>
+
+<div class="cards" id="cards"></div>
+
+<div class="pagination" id="pagination"></div>
+
+</div>
+
+<script src="../Js/app.js"></script>
+</body>
+</html>

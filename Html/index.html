@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Biblioteca Horizon — Início</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../Css/Styeles.css" />
+</head>
+
+<body>
+
+<header class="header">
+  <nav class="nav">
+    <div class="brand" title="Biblioteca Horizon">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M3 7l9-4 9 4-9 4-9-4z" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M3 7v6c0 2.8 4.5 5 9 5s9-2.2 9-5V7" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>Biblioteca Horizon</span>
+    </div>
+
+    <div class="tabs">
+      <a href="./index.html" class="tab active" aria-current="page">Início</a>
+      <a href="./Clientes.html" class="tab">Cadastro</a>
+      <a href="./Acervo.html" class="tab">Acervo</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="../Image/imagem1.webp" alt="Imagem representativa da Biblioteca Horizon">
+
+    <div class="hero-text">
+      <h1>Uma nova forma de explorar conhecimento</h1>
+      <p>A Biblioteca Horizon conecta você a livros, mangás, romances e conteúdos acadêmicos. 
+      Tudo em um ambiente rápido, moderno e totalmente virtual.</p>
+      <a href="./Clientes.html" class="btn-link">Começar agora</a>
+    </div>
+  </section>
+
+  <!-- DESTAQUES / CATEGORIAS -->
+  <section class="features container">
+    <div class="feature-card card">
+      <div class="bd">
+        <h2>Livros</h2>
+        <p class="muted">Romance, ficção, técnico e acadêmico.</p>
+      </div>
+    </div>
+
+    <div class="feature-card card">
+      <div class="bd">
+        <h2>Mangás</h2>
+        <p class="muted">Acervo pensado também para leitores de quadrinhos.</p>
+      </div>
+    </div>
+
+    <div class="feature-card card">
+      <div class="bd">
+        <h2>Revistas</h2>
+        <p class="muted">Conteúdos periódicos e coleções especiais.</p>
+      </div>
+    </div>
+
+    <div class="feature-card card">
+      <div class="bd">
+        <h2>Acadêmicos</h2>
+        <p class="muted">Pesquisa e referência — ideal para estudos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about-section container">
+    <img src="../Image/imagem5.webp" alt="Leitura na Biblioteca Horizon">
+
+    <div class="text">
+      <h2>Sobre a Biblioteca Horizon</h2>
+      <p>A Biblioteca Horizon democratiza o acesso ao conhecimento com um acervo digital completo,
+      gratuito e fácil de navegar. Registre livros, acompanhe empréstimos e descubra novas obras todos os dias.</p>
+
+      <p>Seja para estudo, lazer ou pesquisa, a Horizon é o lugar ideal para quem busca conhecimento
+      com praticidade, velocidade e modernidade.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container small muted">
+    Feito com ♥ — <span id="anoAtual"></span>
+  </div>
+  <button id="backToTop" class="btn ghost" title="Voltar ao topo" style="position:fixed;right:16px;bottom:16px;display:none;">↑</button>
+</footer>
+
+<script src="../Js/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', ()=>{
+  document.getElementById('anoAtual').textContent = new Date().getFullYear();
+
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', ()=> {
+    if(window.scrollY > 300) btn.style.display = 'inline-flex'; else btn.style.display = 'none';
+  });
+  btn.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
+});
+</script>
+
+</body>
+</html>
